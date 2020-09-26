@@ -151,7 +151,7 @@ class Profile extends Component {
     const { redirectToSignin, user, users, posts, likedPosts,followingUsersPost } = this.state
     if (redirectToSignin) return <Redirect to='/signin' />
     const photoUrl = user._id
-      ? `${process.env.REACT_APP_API_URL}/user/photo/${
+      ? `/user/photo/${
           user._id
         }?${new Date().getTime()}`
       : `https://robohash.org/${user.name}`

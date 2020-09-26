@@ -90,7 +90,7 @@ class SinglePost extends Component {
     }
     const { post, likes, like, redirectToSignin, comments } = this.state
     let photoUrl = post
-      ? `${process.env.REACT_APP_API_URL}/post/photo/${post._id}`
+      ? `/post/photo/${post._id}`
       : DefaultAvatar
     const posterId = post.postedBy ? post.postedBy._id : ''
     const posterName = post.postedBy ? post.postedBy.name : 'Unknown'

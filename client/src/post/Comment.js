@@ -81,7 +81,7 @@ class Comment extends Component {
                           border: '2px solid black'
                         }}
                         className='mr-3'
-                        src={`${process.env.REACT_APP_API_URL}/user/photo/${comment.postedBy._id}`}
+                        src={`/user/photo/${comment.postedBy._id}`}
                         onError={i => (i.target.src = `${DefaultAvatar}`)}
                         alt={comment.postedBy.name}
                         height='40px'

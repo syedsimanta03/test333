@@ -123,7 +123,7 @@ class EditPost extends Component {
         ) : (
           <>
             <img
-              src={`${process.env.REACT_APP_API_URL}/post/photo/${post._id}`}
+              src={`/post/photo/${post._id}`}
               onError={i => (i.target.src = `${DefaultAvatar}`)}
               style={{ width: '30%', height: '15vw', objectFit: 'cover' }}
               alt={post.title}

@@ -29,7 +29,7 @@ class Users extends Component {
             style={{ height: 'auto', width: '30vw' }}
             className='img-thumbnail'
             src={
-              `${process.env.REACT_APP_API_URL}/user/photo/${user._id}` ||
+              `/user/photo/${user._id}` ||
               `https://robohash.org/${user.name}`
             }
             onError={(i) =>

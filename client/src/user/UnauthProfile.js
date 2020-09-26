@@ -62,7 +62,7 @@ class UnauthProfile extends Component {
               style={{ height: 'auto', width: '30vw' }}
               className='img-thumbnail'
               src={
-                `${process.env.REACT_APP_API_URL}/user/photo/${params._id}` ||
+                `/user/photo/${params._id}` ||
                 `https://robohash.org/${userInfo}`
               }
               onError={(i) =>

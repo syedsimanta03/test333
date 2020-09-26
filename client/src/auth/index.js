@@ -1,5 +1,5 @@
 export const signup = user => {
-  return fetch(`${process.env.REACT_APP_API_URL}/signup`, {
+  return fetch(`/signup`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -12,7 +12,7 @@ export const signup = user => {
 };
 
 export const signin = user => {
-  return fetch(`${process.env.REACT_APP_API_URL}/signin`, {
+  return fetch(`/signin`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -40,7 +40,7 @@ export const isAuthenticate = () => {
 export const signout = next => {
   if (typeof window !== 'undefined') localStorage.removeItem('jwt');
   next();
-  return fetch(`${process.env.REACT_APP_API_URL}/signout`, { method: 'POST' })
+  return fetch(`/signout`, { method: 'POST' })
     .then(res => res.json())
     .catch(err => console.log(err));
 };

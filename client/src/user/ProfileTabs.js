@@ -31,7 +31,7 @@ class ProfileTabs extends Component {
                           border: '2px solid black',
                         }}
                         className='mr-3'
-                        src={`${process.env.REACT_APP_API_URL}/user/photo/${person._id}`}
+                        src={`/user/photo/${person._id}`}
                         onError={(i) => (i.target.src = `${DefaultAvatar}`)}
                         alt={person.name}
                         height='40px'
@@ -63,7 +63,7 @@ class ProfileTabs extends Component {
                             border: '2px solid black',
                           }}
                           className='mr-3'
-                          src={`${process.env.REACT_APP_API_URL}/user/photo/${person._id}`}
+                          src={`/user/photo/${person._id}`}
                           onError={(i) => (i.target.src = `${DefaultAvatar}`)}
                           alt={person.name}
                           height='40px'

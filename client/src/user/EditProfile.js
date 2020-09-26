@@ -149,7 +149,7 @@ class EditProfile extends Component {
         )}
 
         <img
-          src={`${process.env.REACT_APP_API_URL}/user/photo/${id}`}
+          src={`/user/photo/${id}`}
           onError={i => (i.target.src = `${DefaultAvatar}`)}
           style={{ width: '30%', height: '15vw', objectFit: 'cover' }}
           alt={name}
