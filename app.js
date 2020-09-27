@@ -21,10 +21,13 @@ const userRoutes = require('./routes/user');
 
 //db
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true
+  .connect('mongodb+srv://ralph-nakhoul:1998227Ralph@cluster0.mru2p.mongodb.net/test?retryWrites=true&w=majority' || process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
   })
-  .then(() => console.log('DB connected'));
+  .then(() => console.log('DB connected'))
 
 mongoose.connection.on('error', err => {
   console.log('DB connection error: ' + err.message);
@@ -70,6 +73,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 7000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
